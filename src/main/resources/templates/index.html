@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Convertidor de SQL a HANA</title>
+</head>
+<body>
+<h2>Convertidor de SQL a HANA</h2>
+
+<form action="/convert" method="post">
+    <textarea name="sqlQuery" rows="10" cols="80" placeholder="Ingresa tu consulta SQL"></textarea><br>
+    <input type="submit" value="Convert">
+</form>
+
+<br>
+
+<h3>Consulta SQL anterior: </h3>
+<pre th:text="${originalQuery}"></pre>
+
+<h3>Conversion de Query:</h3>
+<pre th:text="${convertedQuery}"></pre>
+</body>
+</html>
